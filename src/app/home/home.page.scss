@@ -1,0 +1,69 @@
+
+ion-content {
+  --background: #ffffff;
+  ion-header {
+    ion-toolbar{
+        --background: trnasparent;
+    }
+}
+.container{
+  width:100%;
+  height:30%;
+  text-align: center;
+  padding-top: 20%;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+.logo1 {
+  font-size: 30px;
+  text-align: center;
+  color:#ffffff;
+  margin-top: 10px;
+}
+.sign{
+  margin-top:30px;
+  margin-left:20px;
+  color:#4854e0;
+  font-size: 25px;
+}
+.logo2 {
+  font-size: 30px;
+  text-align: center;
+  color:#ffffff;
+  letter-spacing: 5px;
+  font-family: 'Clicker Script', cursive;
+}
+.logo3 {
+  font-size: 50px;
+  text-align: center;
+}
+.container .logo {
+}
+.inputs{
+  margin-left:20px;
+  margin-right:20px;
+  padding: 10%;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 5px 5px #888888;
+}
+ion-input{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  height:50px;
+  color:#4854e0;
+  box-shadow: 1px 5px 5px #888888;
+}
+ion-label{
+  color:#4854e0;
+}
+ion-button{
+  width:99%;
+  height:50px;
+
+}
+a{
+  text-decoration: none;
+}
+}

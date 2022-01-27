@@ -1,0 +1,24 @@
+<ion-content [fullscreen]="true">
+
+  
+
+  <div class="container">
+    <img class="logo" src="/assets/logo-dark.png"><br>
+    <br>
+  </div>
+  <h1 class="sign">Log In</h1>
+  <form class="inputs" [formGroup]="loginForm">
+    <ion-label class="inputName">Email</ion-label>
+      <ion-input formControlName="email" placeholder="Enter Email Address" required></ion-input>
+      <ion-label class="inputName">Password</ion-label>
+      <ion-input type="password" formControlName="password" placeholder="Enter Password" required>
+      </ion-input>
+
+    <div class="bottom-section">
+      <ion-button (click)="login()" color="tertiary">
+        Log in
+      </ion-button>
+    </div>
+  </form>
+</ion-content>
+

@@ -1,0 +1,47 @@
+<ion-content>
+  <ion-header class="ion-no-border">
+    <ion-toolbar class="ion-toolbar">
+        <ion-button style="margin-right: 10px;" href="/home" slot="end">
+          <ion-icon name="log-out-outline"></ion-icon>
+          L o g o u t</ion-button>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card>
+      <ion-card-title style="padding: 10px; font-size: 18px;">Add Product</ion-card-title>
+  </ion-card>
+  <form [formGroup]="taskForm" (ngSubmit)="onSubmit()">
+    <div class="inputs">
+      <ion-input type="hidden" formControlName="id"></ion-input>
+      
+        <ion-label position="stacked">Product Name</ion-label>
+        <ion-input class="inputText" type="text" formControlName="product_name"></ion-input>
+        
+        <ion-label position="stacked">Description</ion-label>
+        <ion-input class="inputText" type="text" formControlName="description"></ion-input>
+
+        <ion-label  position="stacked">Price</ion-label>
+        <ion-input  class="inputText" type="text" formControlName="price"></ion-input>
+
+        <ion-label position="stacked">Quantity</ion-label>
+        <ion-input  class="inputText" type="text" formControlName="quantity"></ion-input>
+      
+    <ion-button type="submit">Submit</ion-button>
+    <ion-button *ngIf="enableEdit" type="submit">Update</ion-button>
+    </div>
+        
+<br>
+    <ion-card>
+      <ion-card-title style="padding: 10px; font-size: 18px;">List of Product</ion-card-title>
+  </ion-card>
+    <ion-list class="inputs1" lines="none">
+        <ion-item lines="none" *ngFor="let task of tasks">
+          <ion-label>{{task.product_name}}</ion-label>
+          <ion-button  id="{{task.id}}" (click)="editTask($event)"  slot="end">Edit </ion-button>
+          <ion-button id="{{task.id}}"  (click)="deleteTask($event)" slot="end"> Delete </ion-button>
+        </ion-item>
+    </ion-list>
+
+
+  </form>
+</ion-content>
